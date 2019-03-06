@@ -127,6 +127,10 @@ export default class extends PureComponent {
         this.loadSaveData(this.props.saveData);
       }
     }, 100);
+
+    window.setInterval(() => {
+      this.saveLine();
+    }, 50)
   }
 
   componentDidUpdate(prevProps) {
